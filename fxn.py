@@ -1,5 +1,9 @@
 #to reuse a code
 
+from cgitb import reset
+from tkinter import Y
+
+
 def fxn():
     pass
 
@@ -49,7 +53,7 @@ print("".join(mylist3))
 print("--".join(mylist3))
 print("+".join(mylist3))
 
-#Fxn excersie Secret check
+#Fxn excersie Secret check, scheck if the work "secret" is in a string.
 
 def secret_check(text):
     if "secret" in text:
@@ -61,3 +65,52 @@ print(secret_check("my little secret"))
 def secret_check(text):
     return "secret" in text.lower()        # "secret in text"this is going to return a boolean, .lower incase of an edge case of capital letter "SECRET"
 print(secret_check("my little SEcret"))
+
+
+#Exercise 2 Check if Vowel is in a string
+
+def vowel_check(mystring):
+    for letter in mystring:
+        for vowel in "aeiou":
+            if vowel==letter:
+                return vowel
+print(vowel_check("yidjgh"))
+
+#Calling fxn
+
+def add(x,y):
+    print(x+y)
+add(8,4)
+def add(x,y=5): #default value for y in case it is not specifed
+    print(x+y)
+add(5)
+#defaul value ust be in the end of the parameter list e.g def add(def add(x=6,y=5) and not def add(x=4,y)
+def add(x,y):
+    return(x+y)
+add(8,4)  #this would no print 12, but rather would return None
+#All function return None by default
+result = add(6,3)
+print(result)
+
+def division(dividend, divisor):
+    if divisor != 0:
+        return dividend/divisor
+    else:
+        return "Nonesense divison"
+result2 =division(76,2)
+print(result2) 
+
+#Taking multiple arguments Pcking arguments
+
+def multiply(*args):
+    total = 1
+    for arg in args:
+        total = total * arg
+    return total
+
+print(multiply(3,2,4))
+#unpacking arguments
+def add(x,y):
+    return x+y
+nums= [4,5]
+print(add(*nums))

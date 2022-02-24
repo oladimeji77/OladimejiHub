@@ -1,13 +1,10 @@
-from typing import ItemsView
-
-
 Items = ['ola', 'deji', 250, 'folawe', 'akin']
 Items2 = ['dami', 'ufuoma', '430ad', 550]
 
 
-print(Items)
-print(len(Items))
-print(Items[3])
+print(Items)  #the entie Items list
+print(len(Items))  #lenght of list
+print(Items[3])  #
 print(Items[1:3])
 Items.append(700)
 print(Items)
